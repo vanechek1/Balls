@@ -10,7 +10,7 @@ public class CheckObj : MonoBehaviour
     {
         Vector2 vel = rb.velocity;
         float speed = vel.magnitude;
-        if (speed < 0.1f && rb.transform.position.y > 2.66 + rb.transform.localScale.y/2)
+        if (speed < 0.1f && rb.transform.position.y > 3.27 + rb.transform.localScale.y/2)
         {
             Debug.Log("Game end");
         }
