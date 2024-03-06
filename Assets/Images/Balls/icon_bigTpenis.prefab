@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6975484635413697288}
   - component: {fileID: -8410543177411084796}
   - component: {fileID: -1372955627029786964}
+  - component: {fileID: -3358332607445673228}
   m_Layer: 0
   m_Name: icon_bigTpenis
   m_TagString: bigTennis
@@ -103,7 +104,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -215,3 +216,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obj: {fileID: 6498149475716338215}
   newObj: {fileID: 5519765437774895068, guid: 496249e4b082e954594043aed8d7beab, type: 3}
+--- !u!114 &-3358332607445673228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6498149475716338215}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3fd403455c95734ca23da4bccadb095, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  massObj: []
+  obj: {fileID: 0}

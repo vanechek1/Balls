@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 70457164381056562}
   - component: {fileID: -3876875804765657239}
   - component: {fileID: -4172043352016443489}
+  - component: {fileID: -872281262375060062}
   m_Layer: 0
   m_Name: icon_smallTpenis
   m_TagString: smallTennis
@@ -248,3 +249,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obj: {fileID: 8465189333565779288}
   newObj: {fileID: 1176687874582105315, guid: c75160ff4bb110648addf18d5a8929b2, type: 3}
+--- !u!114 &-872281262375060062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8465189333565779288}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3fd403455c95734ca23da4bccadb095, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  massObj: []
+  obj: {fileID: 0}

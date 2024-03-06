@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8222163320353505784}
   - component: {fileID: -7859895749789085308}
   - component: {fileID: -2052664450275733447}
+  - component: {fileID: 4158175216723281736}
   m_Layer: 0
   m_Name: icon_golf
   m_TagString: golf
@@ -265,3 +266,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obj: {fileID: 1176687874582105315}
   newObj: {fileID: 6498149475716338215, guid: fb0e4da420d9ecd47a4c536542af5cc2, type: 3}
+--- !u!114 &4158175216723281736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176687874582105315}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3fd403455c95734ca23da4bccadb095, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  massObj: []
+  obj: {fileID: 0}

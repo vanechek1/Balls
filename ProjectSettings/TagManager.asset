@@ -15,6 +15,7 @@ TagManager:
   - smallTennis
   - volleyball
   - fitness
+  - player
   layers:
   - Default
   - TransparentFX

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2392060203878430276}
   - component: {fileID: 2063147695821159202}
   - component: {fileID: -400553655553790628}
+  - component: {fileID: 2791369597545406373}
   m_Layer: 0
   m_Name: icon_handball
   m_TagString: handball
@@ -253,3 +254,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obj: {fileID: 6024080502225833682}
   newObj: {fileID: 6243835065148716527, guid: f608cf1ce5177184c98eda473d6c6704, type: 3}
+--- !u!114 &2791369597545406373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6024080502225833682}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3fd403455c95734ca23da4bccadb095, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  massObj: []
+  obj: {fileID: 6024080502225833682}
