@@ -13,11 +13,10 @@ GameObject:
   - component: {fileID: 2615514584752171170}
   - component: {fileID: 8222163320353505784}
   - component: {fileID: -7859895749789085308}
-  - component: {fileID: -2052664450275733447}
-  - component: {fileID: 4158175216723281736}
+  - component: {fileID: 2921921805534758261}
   m_Layer: 0
   m_Name: icon_golf
-  m_TagString: golf
+  m_TagString: 1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,8 +30,8 @@ Transform:
   m_GameObject: {fileID: 1176687874582105315}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5251913, y: 0.21709532, z: 0}
-  m_LocalScale: {x: 0.16, y: 0.16, z: 1}
+  m_LocalPosition: {x: 2.202136, y: 0.21709532, z: 0}
+  m_LocalScale: {x: 0.22, y: 0.22, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -227,7 +226,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -252,7 +251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 8222163320353505784}
---- !u!114 &-2052664450275733447
+--- !u!114 &2921921805534758261
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -261,23 +260,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1176687874582105315}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a734e4423e7f4164284cfc9466535605, type: 3}
+  m_Script: {fileID: 11500000, guid: c88fc6df63c09104289bb06b94570151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obj: {fileID: 1176687874582105315}
-  newObj: {fileID: 6498149475716338215, guid: fb0e4da420d9ecd47a4c536542af5cc2, type: 3}
---- !u!114 &4158175216723281736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1176687874582105315}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3fd403455c95734ca23da4bccadb095, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  massObj: []
-  obj: {fileID: 0}

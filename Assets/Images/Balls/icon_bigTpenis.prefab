@@ -13,11 +13,10 @@ GameObject:
   - component: {fileID: 5641305296806340285}
   - component: {fileID: 6975484635413697288}
   - component: {fileID: -8410543177411084796}
-  - component: {fileID: -1372955627029786964}
-  - component: {fileID: -3358332607445673228}
+  - component: {fileID: -857182312731507722}
   m_Layer: 0
   m_Name: icon_bigTpenis
-  m_TagString: bigTennis
+  m_TagString: 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,8 +30,8 @@ Transform:
   m_GameObject: {fileID: 6498149475716338215}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.903641, y: -1.109, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: -2.4802, y: -1.109, z: 0}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -202,7 +201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 5641305296806340285}
---- !u!114 &-1372955627029786964
+--- !u!114 &-857182312731507722
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -211,23 +210,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6498149475716338215}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a734e4423e7f4164284cfc9466535605, type: 3}
+  m_Script: {fileID: 11500000, guid: c88fc6df63c09104289bb06b94570151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obj: {fileID: 6498149475716338215}
-  newObj: {fileID: 5519765437774895068, guid: 496249e4b082e954594043aed8d7beab, type: 3}
---- !u!114 &-3358332607445673228
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6498149475716338215}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3fd403455c95734ca23da4bccadb095, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  massObj: []
-  obj: {fileID: 0}

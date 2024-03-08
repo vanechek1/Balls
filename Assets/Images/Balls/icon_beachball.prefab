@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 7701500814538554420}
   - component: {fileID: 6473439535256507918}
   - component: {fileID: 3217862982701411400}
-  - component: {fileID: 2513431342760454970}
+  - component: {fileID: 7351345930596542902}
   m_Layer: 0
   m_Name: icon_beachball
-  m_TagString: beachball
+  m_TagString: 9
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -238,7 +238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 7701500814538554420}
---- !u!114 &2513431342760454970
+--- !u!114 &7351345930596542902
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -247,8 +247,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 7821579627486695239}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a734e4423e7f4164284cfc9466535605, type: 3}
+  m_Script: {fileID: 11500000, guid: c88fc6df63c09104289bb06b94570151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obj: {fileID: 7821579627486695239}
-  newObj: {fileID: 1082682139113446691, guid: 789af922289cffd4b9063727989bb32f, type: 3}

@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 6584580817838441625}
   - component: {fileID: 2433263958191599125}
   - component: {fileID: 2036152514008895560}
-  - component: {fileID: 1694757544939428364}
+  - component: {fileID: -8651897872014560385}
   m_Layer: 0
   m_Name: icon_volleyball
-  m_TagString: volleyball
+  m_TagString: 5
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.25, y: 2.21, z: 0}
-  m_LocalScale: {x: 0.32, y: 0.32, z: 1}
+  m_LocalScale: {x: 0.44, y: 0.44, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -256,7 +256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 6584580817838441625}
---- !u!114 &1694757544939428364
+--- !u!114 &-8651897872014560385
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -265,8 +265,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6243835065148716527}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a734e4423e7f4164284cfc9466535605, type: 3}
+  m_Script: {fileID: 11500000, guid: c88fc6df63c09104289bb06b94570151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obj: {fileID: 6243835065148716527}
-  newObj: {fileID: 2334896477008642086, guid: a895d713fb9824348a0c995a332af4ae, type: 3}

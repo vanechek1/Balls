@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 3906031220491806460}
   - component: {fileID: 3451954057976582357}
   - component: {fileID: -5524511481001066372}
-  - component: {fileID: 3390165797157604740}
+  - component: {fileID: 6594175084666431223}
   m_Layer: 0
   m_Name: icon_bowling
-  m_TagString: bowling
+  m_TagString: 8
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.5295694, y: -0.43777162, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
+  m_LocalScale: {x: 0.85, y: 0.85, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 3451954057976582357}
---- !u!114 &3390165797157604740
+--- !u!114 &6594175084666431223
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -243,8 +243,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 8556948166891111752}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a734e4423e7f4164284cfc9466535605, type: 3}
+  m_Script: {fileID: 11500000, guid: c88fc6df63c09104289bb06b94570151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obj: {fileID: 8556948166891111752}
-  newObj: {fileID: 7821579627486695239, guid: 7f5594977745de74b8904f1c51f0acfd, type: 3}

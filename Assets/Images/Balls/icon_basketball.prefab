@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 2323682235688901785}
   - component: {fileID: 2011664428227295637}
   - component: {fileID: 2686002388724960532}
-  - component: {fileID: -7270671517283225748}
+  - component: {fileID: 1662975329118102942}
   m_Layer: 0
   m_Name: icon_basketball
-  m_TagString: basketball
+  m_TagString: 7
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.62, y: 0.7, z: 0}
-  m_LocalScale: {x: 0.42, y: 0.42, z: 1}
+  m_LocalScale: {x: 0.48, y: 0.48, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -274,7 +274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 2011664428227295637}
---- !u!114 &-7270671517283225748
+--- !u!114 &1662975329118102942
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -283,9 +283,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 7654242069189936583}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a734e4423e7f4164284cfc9466535605, type: 3}
+  m_Script: {fileID: 11500000, guid: c88fc6df63c09104289bb06b94570151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obj: {fileID: 7654242069189936583}
-  newObj: {fileID: 8556948166891111752, guid: 077329c6dfbb8994d9662fb770060cd6, type: 3}
-  componentToDisable: {fileID: -7270671517283225748}

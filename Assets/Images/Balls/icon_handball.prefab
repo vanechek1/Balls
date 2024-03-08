@@ -13,11 +13,10 @@ GameObject:
   - component: {fileID: 5209032425062586977}
   - component: {fileID: 2392060203878430276}
   - component: {fileID: 2063147695821159202}
-  - component: {fileID: -400553655553790628}
-  - component: {fileID: 2791369597545406373}
+  - component: {fileID: 1167976340764965052}
   m_Layer: 0
   m_Name: icon_handball
-  m_TagString: handball
+  m_TagString: 4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,8 +30,8 @@ Transform:
   m_GameObject: {fileID: 6024080502225833682}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.3431582, y: 1.887006, z: 0}
-  m_LocalScale: {x: 0.28, y: 0.28, z: 1}
+  m_LocalPosition: {x: 2.9879763, y: 1.887006, z: 0}
+  m_LocalScale: {x: 0.43, y: 0.43, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -215,7 +214,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -240,7 +239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 2392060203878430276}
---- !u!114 &-400553655553790628
+--- !u!114 &1167976340764965052
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -249,23 +248,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6024080502225833682}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a734e4423e7f4164284cfc9466535605, type: 3}
+  m_Script: {fileID: 11500000, guid: c88fc6df63c09104289bb06b94570151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obj: {fileID: 6024080502225833682}
-  newObj: {fileID: 6243835065148716527, guid: f608cf1ce5177184c98eda473d6c6704, type: 3}
---- !u!114 &2791369597545406373
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6024080502225833682}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3fd403455c95734ca23da4bccadb095, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  massObj: []
-  obj: {fileID: 6024080502225833682}

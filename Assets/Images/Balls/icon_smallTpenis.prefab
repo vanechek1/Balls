@@ -13,11 +13,10 @@ GameObject:
   - component: {fileID: 8779814355466440628}
   - component: {fileID: 70457164381056562}
   - component: {fileID: -3876875804765657239}
-  - component: {fileID: -4172043352016443489}
-  - component: {fileID: -872281262375060062}
+  - component: {fileID: -6162369591655402327}
   m_Layer: 0
   m_Name: icon_smallTpenis
-  m_TagString: smallTennis
+  m_TagString: 0
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,8 +30,8 @@ Transform:
   m_GameObject: {fileID: 8465189333565779288}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.710847, y: -1.85, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_LocalPosition: {x: -1.14, y: -1.85, z: 0}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -104,7 +103,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -235,7 +234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 8779814355466440628}
---- !u!114 &-4172043352016443489
+--- !u!114 &-6162369591655402327
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -244,23 +243,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 8465189333565779288}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a734e4423e7f4164284cfc9466535605, type: 3}
+  m_Script: {fileID: 11500000, guid: c88fc6df63c09104289bb06b94570151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obj: {fileID: 8465189333565779288}
-  newObj: {fileID: 1176687874582105315, guid: c75160ff4bb110648addf18d5a8929b2, type: 3}
---- !u!114 &-872281262375060062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8465189333565779288}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3fd403455c95734ca23da4bccadb095, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  massObj: []
-  obj: {fileID: 0}

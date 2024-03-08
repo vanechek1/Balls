@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2334896477008642086
+--- !u!1 &9159169885081238919
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,41 +8,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4577290131706659469}
-  - component: {fileID: 1695592354506800869}
-  - component: {fileID: 6323667442688646359}
-  - component: {fileID: 5162542022394715994}
-  - component: {fileID: -3016747824197061985}
-  - component: {fileID: 1800367787266697708}
+  - component: {fileID: 4677926360866254036}
+  - component: {fileID: 3469485320638595522}
+  - component: {fileID: 4665857863847713025}
+  - component: {fileID: 2560764574978620146}
+  - component: {fileID: 9127151775084901867}
+  - component: {fileID: 7722278846795971215}
   m_Layer: 0
   m_Name: icon_football
-  m_TagString: football
+  m_TagString: 6
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4577290131706659469
+--- !u!4 &4677926360866254036
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2334896477008642086}
+  m_GameObject: {fileID: 9159169885081238919}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.709366, y: 2.5091298, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
+  m_LocalPosition: {x: 0.65, y: -0.2, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1695592354506800869
+--- !u!212 &3469485320638595522
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2334896477008642086}
+  m_GameObject: {fileID: 9159169885081238919}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -88,14 +88,14 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &6323667442688646359
+--- !u!50 &4665857863847713025
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2334896477008642086}
+  m_GameObject: {fileID: 9159169885081238919}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -115,13 +115,13 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &5162542022394715994
+--- !u!60 &2560764574978620146
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2334896477008642086}
+  m_GameObject: {fileID: 9159169885081238919}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -240,30 +240,28 @@ PolygonCollider2D:
       - {x: 0.7, y: -2.24}
       - {x: 0.82, y: -2.2}
   m_UseDelaunayMesh: 0
---- !u!114 &-3016747824197061985
+--- !u!114 &9127151775084901867
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2334896477008642086}
+  m_GameObject: {fileID: 9159169885081238919}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 068b764ab3c761d4f9e04da66a8f6577, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 6323667442688646359}
---- !u!114 &1800367787266697708
+  rb: {fileID: 4665857863847713025}
+--- !u!114 &7722278846795971215
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2334896477008642086}
+  m_GameObject: {fileID: 9159169885081238919}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a734e4423e7f4164284cfc9466535605, type: 3}
+  m_Script: {fileID: 11500000, guid: c88fc6df63c09104289bb06b94570151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obj: {fileID: 2334896477008642086}
-  newObj: {fileID: 7654242069189936583, guid: 4a99f9bf8a269754eab26c434dbb4f65, type: 3}
