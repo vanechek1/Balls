@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -14,6 +15,14 @@ public class Player : MonoBehaviour
     static public Vector2 spawnPos;
     static public string newBall = "n";
     static public int whichBall = 0;
+    static public GameObject nextBall;
+    public GameObject nextPos;
+    static public GameObject timeBall;
+    private void Start()
+    {
+        ShowNextBall();
+    }
+
     void Update()
     {
         SpawnBall();
@@ -59,7 +68,16 @@ public class Player : MonoBehaviour
     IEnumerator SpawnTimer()
     {
         yield return new WaitForSeconds(.75f);
-        Instantiate(balls[Random.Range(0,5)], transform.position, Quaternion.Euler(0f, 0f, 0f));
+        //nextBall.transform.Translate(obj.transform.position);
+        nextBall.GetComponent<BallMove>().enabled = true;
+        Destroy(timeBall);
+        Instantiate(nextBall, obj.transform.position, Quaternion.Euler(0f, 0f, 0f));
+        ShowNextBall();
     }
-
+    void ShowNextBall()
+    {
+        nextBall = balls[Random.Range(0, 5)];
+        nextBall.GetComponent<BallMove>().enabled = false;
+        timeBall = Instantiate(nextBall, nextPos.transform.position, Quaternion.Euler(0f, 0f, 0f));
+    }
 }
