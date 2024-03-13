@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class BallMove : MonoBehaviour
 {
@@ -27,11 +28,14 @@ public class BallMove : MonoBehaviour
         //    inthemask = "n";
         //    Player.spawnedYet = "n";
         //}
-        if (Input.GetMouseButtonUp(0))
+        if (!EventSystem.current.IsPointerOverGameObject())
         {
-            GetComponent<Rigidbody2D>().gravityScale = 2;
-            inthemask = "n";
-            Player.spawnedYet = "n";
+            if (Input.GetMouseButtonUp(0))
+            {
+                GetComponent<Rigidbody2D>().gravityScale = 2;
+                inthemask = "n";
+                Player.spawnedYet = "n";
+            }
         }
 
     }
