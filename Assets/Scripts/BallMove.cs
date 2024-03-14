@@ -34,7 +34,7 @@ public class BallMove : MonoBehaviour
             {
                 GetComponent<Rigidbody2D>().gravityScale = 2;
                 inthemask = "n";
-                Player.spawnedYet = "n";
+                //Player.spawnedYet = "n";
             }
         }
 
@@ -43,10 +43,15 @@ public class BallMove : MonoBehaviour
     {
         if(collision.gameObject.tag==gameObject.tag)
         {
-            Player.spawnPos = transform.position;
-            Player.newBall = "y";
-            Player.whichBall = int.Parse(gameObject.tag);
-            Destroy(gameObject);
+            StartCoroutine(ForCollision());
         }
+    }
+    IEnumerator ForCollision()
+    {
+        yield return new WaitForSeconds(.15f);
+        Player.spawnPos = transform.position;
+        Player.newBall = "y";
+        Player.whichBall = int.Parse(gameObject.tag);
+        Destroy(gameObject);
     }
 }

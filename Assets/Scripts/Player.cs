@@ -24,6 +24,7 @@ public class Player : MonoBehaviour
     static public GameObject nextBall;
     public GameObject nextPos;
     static public GameObject timeBall;
+    public GameObject effect;
     private void Start()
     {
         spawnedYet = "n";
@@ -56,13 +57,18 @@ public class Player : MonoBehaviour
             }
         }
         playerxPos = transform.position;
+
+        if (Input.GetMouseButtonUp(0) && spawnedYet=="y")
+        {
+            spawnedYet = "n";
+        }
     }
     void SpawnBall()
     {
         if(spawnedYet == "n")
         {
             StartCoroutine(SpawnTimer());
-            spawnedYet = "y";
+            spawnedYet = "w";
         }
     }
     void replaceFruit()
@@ -71,7 +77,9 @@ public class Player : MonoBehaviour
         {
             newBall = "n";
             SumPoints.text = (int.Parse(SumPoints.text) + points[whichBall]).ToString();
-            Instantiate(balls[whichBall+1], spawnPos, Quaternion.Euler(0f, 0f, 0f));
+            Instantiate(effect, spawnPos, Quaternion.Euler(0f, 0f, 0f));
+            GameObject nb = Instantiate(balls[whichBall+1], spawnPos, Quaternion.Euler(0f, 0f, 0f));
+            nb.GetComponent<Rigidbody2D>().gravityScale = 2;
         }
     }
 
@@ -82,6 +90,7 @@ public class Player : MonoBehaviour
         nextBall.GetComponent<BallMove>().enabled = true;
         Destroy(timeBall);
         Instantiate(nextBall, obj.transform.position, Quaternion.Euler(0f, 0f, 0f));
+        spawnedYet = "y";
         ShowNextBall();
     }
     void ShowNextBall()
