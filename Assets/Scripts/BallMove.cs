@@ -39,6 +39,8 @@ public class BallMove : MonoBehaviour
         }
 
     }
+    
+    // Сделать отдельным скриптом, чтобы была возможность отключать именно слияние (когда емкость полная, чтобы движущийся в облаке шар не сливался до падения)
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag==gameObject.tag)

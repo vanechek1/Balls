@@ -25,8 +25,10 @@ public class Player : MonoBehaviour
     public GameObject nextPos;
     static public GameObject timeBall;
     public GameObject effect;
+    public GameObject DeathScreen;
     private void Start()
     {
+        DeathScreen.SetActive(false);
         spawnedYet = "n";
         ShowNextBall();
     }
@@ -55,13 +57,13 @@ public class Player : MonoBehaviour
                 Vector3 mouse = new Vector3(Input.GetAxis("Mouse X") * speed * Time.deltaTime, 0, 0);
                 transform.Translate(mouse * speed * 10);
             }
+            if (Input.GetMouseButtonUp(0) && spawnedYet == "y")
+            {
+                spawnedYet = "n";
+            }
         }
         playerxPos = transform.position;
 
-        if (Input.GetMouseButtonUp(0) && spawnedYet=="y")
-        {
-            spawnedYet = "n";
-        }
     }
     void SpawnBall()
     {

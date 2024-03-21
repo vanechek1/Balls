@@ -533,6 +533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 7724166504527763612}
+  deathScore: {fileID: 0}
 --- !u!114 &8567698848405346492
 MonoBehaviour:
   m_ObjectHideFlags: 0
