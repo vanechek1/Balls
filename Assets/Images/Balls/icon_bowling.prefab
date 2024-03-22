@@ -476,6 +476,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 8565979153834388626}
+  DeathScreen: {fileID: 1030754774095277675, guid: 3f55bdd03c9a0124598cc8e75a130e4d, type: 3}
 --- !u!114 &496049002782238194
 MonoBehaviour:
   m_ObjectHideFlags: 0

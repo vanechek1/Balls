@@ -7,7 +7,7 @@ using UnityEngine;
 public class CheckObj : MonoBehaviour
 {
     public Rigidbody2D rb;
-    public TextMeshProUGUI deathScore;
+    private Player _actionTarget;
     private void Update()
     {
         Vector2 vel = rb.velocity;
@@ -15,8 +15,8 @@ public class CheckObj : MonoBehaviour
         if (speed < 0.1f && rb.transform.position.y > 3.6)
         {
             Debug.Log("Game end");
+            _actionTarget.ShowDeathScreen();
         }
-        
     }
 
 }

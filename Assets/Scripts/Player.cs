@@ -63,7 +63,6 @@ public class Player : MonoBehaviour
             }
         }
         playerxPos = transform.position;
-
     }
     void SpawnBall()
     {
@@ -101,4 +100,10 @@ public class Player : MonoBehaviour
         nextBall.GetComponent<BallMove>().enabled = false;
         timeBall = Instantiate(nextBall, nextPos.transform.position, Quaternion.Euler(0f, 0f, 0f));
     }
+
+    public void ShowDeathScreen()
+    {
+        DeathScreen.SetActive(true);
+    }
+
 }
