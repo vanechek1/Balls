@@ -7,6 +7,8 @@ using UnityEngine.EventSystems;
 public class BallMove : MonoBehaviour
 {
     private string inthemask = "y";
+    private string timetocheck = "n";
+    private Player odod;
     void Start()
     {
         if(transform.position.y < 3.2)
@@ -35,6 +37,7 @@ public class BallMove : MonoBehaviour
                 GetComponent<Rigidbody2D>().gravityScale = 2;
                 inthemask = "n";
                 //Player.spawnedYet = "n";
+                StartCoroutine(chkGameOver());
             }
         }
 
@@ -55,5 +58,18 @@ public class BallMove : MonoBehaviour
         Player.newBall = "y";
         Player.whichBall = int.Parse(gameObject.tag);
         Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.name =="limit" && (timetocheck=="y"))
+        {
+            Debug.Log("Game Over");
+        }
+    }
+    IEnumerator chkGameOver()
+    {
+        yield return new WaitForSeconds(.75f);
+        timetocheck = "y";
     }
 }
