@@ -64,6 +64,7 @@ public class BallMove : MonoBehaviour
     {
         if(other.gameObject.name =="limit" && (timetocheck=="y"))
         {
+            Player.CheckedLose = "y";
             Debug.Log("Game Over");
         }
     }

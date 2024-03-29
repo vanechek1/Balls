@@ -26,8 +26,13 @@ public class Player : MonoBehaviour
     static public GameObject timeBall;
     public GameObject effect;
     public GameObject DeathScreen;
+
+    static public string CheckedLose = "n";
+
     private void Start()
     {
+        int coins = PlayerPrefs.GetInt("coins");
+        SumPoints.text = coins.ToString();
         DeathScreen.SetActive(false);
         spawnedYet = "n";
         ShowNextBall();
@@ -63,6 +68,8 @@ public class Player : MonoBehaviour
             }
         }
         playerxPos = transform.position;
+
+        if (CheckedLose == "y") DeathScreen.SetActive(true);
     }
     void SpawnBall()
     {
@@ -77,10 +84,14 @@ public class Player : MonoBehaviour
         if(newBall == "y")
         {
             newBall = "n";
-            SumPoints.text = (int.Parse(SumPoints.text) + points[whichBall]).ToString();
+            //SumPoints.text = (int.Parse(SumPoints.text) + points[whichBall]).ToString();
             Instantiate(effect, spawnPos, Quaternion.Euler(0f, 0f, 0f));
             GameObject nb = Instantiate(balls[whichBall+1], spawnPos, Quaternion.Euler(0f, 0f, 0f));
             nb.GetComponent<Rigidbody2D>().gravityScale = 2;
+            int coins = PlayerPrefs.GetInt("coins");
+            PlayerPrefs.SetInt("coins", coins + points[whichBall]);
+            coins = PlayerPrefs.GetInt("coins");
+            SumPoints.text = coins.ToString();
         }
     }
 
