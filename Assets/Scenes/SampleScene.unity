@@ -1857,6 +1857,7 @@ MonoBehaviour:
   nextPos: {fileID: 1124632327}
   effect: {fileID: 427626530586481267, guid: 3048d142f1a429144a3a06eb53b654b1, type: 3}
   DeathScreen: {fileID: 24514410}
+  scoreD: {fileID: 2044431609}
 --- !u!1 &1028285791
 GameObject:
   m_ObjectHideFlags: 0
@@ -2306,7 +2307,7 @@ Transform:
   m_GameObject: {fileID: 1275960529}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.02, y: 2.72, z: -0.06837599}
+  m_LocalPosition: {x: -0.02, y: -3.72, z: -0.06837599}
   m_LocalScale: {x: 9.4375, y: 0.46548435, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3135,6 +3136,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2044431609 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1859289350985095401, guid: 3f55bdd03c9a0124598cc8e75a130e4d, type: 3}
+  m_PrefabInstance: {fileID: 6914044871530629898}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2068030624
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3673,6 +3685,10 @@ PrefabInstance:
     - target: {fileID: 1030754774095277675, guid: 3f55bdd03c9a0124598cc8e75a130e4d, type: 3}
       propertyPath: m_Name
       value: DeathScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859289350985095401, guid: 3f55bdd03c9a0124598cc8e75a130e4d, type: 3}
+      propertyPath: m_text
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2818055887167386845, guid: 3f55bdd03c9a0124598cc8e75a130e4d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size

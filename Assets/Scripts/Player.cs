@@ -6,6 +6,7 @@ using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 
@@ -26,12 +27,16 @@ public class Player : MonoBehaviour
     static public GameObject timeBall;
     public GameObject effect;
     public GameObject DeathScreen;
+    public TextMeshProUGUI scoreD;
 
     static public string CheckedLose = "n";
 
     private void Start()
     {
+        int StartCoins = PlayerPrefs.GetInt("GameCoins");
         int coins = PlayerPrefs.GetInt("coins");
+        PlayerPrefs.SetInt("GameCoins", coins);
+
         SumPoints.text = coins.ToString();
         DeathScreen.SetActive(false);
         spawnedYet = "n";
@@ -69,7 +74,7 @@ public class Player : MonoBehaviour
         }
         playerxPos = transform.position;
 
-        if (CheckedLose == "y") DeathScreen.SetActive(true);
+        if (CheckedLose == "y") ShowDeathScreen();
     }
     void SpawnBall()
     {
@@ -92,6 +97,7 @@ public class Player : MonoBehaviour
             PlayerPrefs.SetInt("coins", coins + points[whichBall]);
             coins = PlayerPrefs.GetInt("coins");
             SumPoints.text = coins.ToString();
+
         }
     }
 
@@ -110,11 +116,15 @@ public class Player : MonoBehaviour
         nextBall = balls[Random.Range(0, 6)];
         nextBall.GetComponent<BallMove>().enabled = false;
         timeBall = Instantiate(nextBall, nextPos.transform.position, Quaternion.Euler(0f, 0f, 0f));
+
     }
 
     public void ShowDeathScreen()
     {
         DeathScreen.SetActive(true);
+        int coins = PlayerPrefs.GetInt("coins");
+        int StartCoins = PlayerPrefs.GetInt("GameCoins");
+        scoreD.text="Score: \n" + (coins - StartCoins).ToString();
     }
 
 
