@@ -9,7 +9,6 @@ public class FonShop : MonoBehaviour
     public int price, access;
     public GameObject block;
     public TextMeshProUGUI objectPrice;
-
     void Awake()
     {
         AccessUpdate();

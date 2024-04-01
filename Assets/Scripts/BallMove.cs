@@ -59,7 +59,6 @@ public class BallMove : MonoBehaviour
         Player.whichBall = int.Parse(gameObject.tag);
         Destroy(gameObject);
     }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.name =="limit" && (timetocheck=="y"))
