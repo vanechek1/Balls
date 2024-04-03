@@ -9,11 +9,14 @@ public class ButtonSound : MonoBehaviour
     public Image MusicButton;
     public Sprite onMusic;
     public Sprite offMusic;
+    public AudioSource ad;
+    public AudioClip clickBt;
     static public bool wasClicked = false;
 
     public void ButtonSoundClick()
     {
-        if(wasClicked == false)
+        ad.PlayOneShot(clickBt);
+        if (wasClicked == false)
         {
             MusicButton.GetComponent<Image>().sprite = offMusic;
             wasClicked = true;
