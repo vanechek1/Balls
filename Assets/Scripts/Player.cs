@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using TMPro;
 using TMPro.Examples;
 using Unity.VisualScripting;
@@ -28,16 +29,18 @@ public class Player : MonoBehaviour
     public GameObject effect;
     public GameObject DeathScreen;
     public TextMeshProUGUI scoreD;
-
     static public string CheckedLose = "n";
-
+    static public string loseCheckForGameOver = "n";
     private void Start()
     {
-        int StartCoins = PlayerPrefs.GetInt("GameCoins");
-        int coins = PlayerPrefs.GetInt("coins");
-        PlayerPrefs.SetInt("GameCoins", coins);
+        //int StartCoins = PlayerPrefs.GetInt("GameCoins");
+        //int coins = PlayerPrefs.GetInt("coins");
+        //PlayerPrefs.SetInt("GameCoins", coins);
 
-        SumPoints.text = coins.ToString();
+        //SumPoints.text = coins.ToString();
+        PlayerPrefs.SetInt("GameCoins", 0);
+
+        loseCheckForGameOver = "n";
         DeathScreen.SetActive(false);
         spawnedYet = "n";
         ShowNextBall();
@@ -93,11 +96,15 @@ public class Player : MonoBehaviour
             Instantiate(effect, spawnPos, Quaternion.Euler(0f, 0f, 0f));
             GameObject nb = Instantiate(balls[whichBall+1], spawnPos, Quaternion.Euler(0f, 0f, 0f));
             nb.GetComponent<Rigidbody2D>().gravityScale = 2;
-            int coins = PlayerPrefs.GetInt("coins");
-            PlayerPrefs.SetInt("coins", coins + points[whichBall]);
-            coins = PlayerPrefs.GetInt("coins");
-            SumPoints.text = coins.ToString();
 
+            //int coins = PlayerPrefs.GetInt("coins");
+            //PlayerPrefs.SetInt("coins", coins + points[whichBall]);
+            //coins = PlayerPrefs.GetInt("coins");
+            //SumPoints.text = coins.ToString();
+            int OneGameCoins = PlayerPrefs.GetInt("GameCoins");
+            PlayerPrefs.SetInt("GameCoins", OneGameCoins + points[whichBall]);
+            OneGameCoins = PlayerPrefs.GetInt("GameCoins");
+            SumPoints.text = OneGameCoins.ToString();
         }
     }
 
@@ -121,10 +128,17 @@ public class Player : MonoBehaviour
 
     public void ShowDeathScreen()
     {
-        DeathScreen.SetActive(true);
-        int coins = PlayerPrefs.GetInt("coins");
-        int StartCoins = PlayerPrefs.GetInt("GameCoins");
-        scoreD.text="Score: \n" + (coins - StartCoins).ToString();
+        if(loseCheckForGameOver=="n")
+        {
+            DeathScreen.SetActive(true);
+            int coins = PlayerPrefs.GetInt("coins");
+            int OneGameCoins = PlayerPrefs.GetInt("GameCoins");
+            PlayerPrefs.SetInt("coins", coins + OneGameCoins);
+            coins = PlayerPrefs.GetInt("coins");
+            SumPoints.text = (coins).ToString();
+            scoreD.text = "Score: \n" + (OneGameCoins).ToString();
+            loseCheckForGameOver = "y";
+        }
     }
 
 
