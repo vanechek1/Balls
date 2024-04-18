@@ -68,7 +68,7 @@ public class Player : MonoBehaviour
             if (Input.GetMouseButton(0))
             {
                 Vector3 mouse = new Vector3(Input.GetAxis("Mouse X") * speed * Time.deltaTime, 0, 0);
-                transform.Translate(mouse * speed * 10);
+                transform.Translate(mouse * 30f);
             }
             if (Input.GetMouseButtonUp(0) && spawnedYet == "y")
             {
