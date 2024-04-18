@@ -12,6 +12,7 @@ public class ButtonSound : MonoBehaviour
     public AudioSource ad;
     public AudioClip clickBt;
     static public bool wasClicked = false;
+    public AudioSource fonMusic;
 
     public void ButtonSoundClick()
     {
@@ -19,11 +20,13 @@ public class ButtonSound : MonoBehaviour
         if (wasClicked == false)
         {
             MusicButton.GetComponent<Image>().sprite = offMusic;
+            fonMusic.enabled = false;
             wasClicked = true;
         }
         else
         {
             MusicButton.GetComponent<Image>().sprite = onMusic;
+            fonMusic.enabled = true;
             wasClicked = false;
         }
     }
