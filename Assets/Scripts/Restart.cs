@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Restart : MonoBehaviour
 {
@@ -27,5 +28,9 @@ public class Restart : MonoBehaviour
             SceneManager.LoadScene("SampleScene");
             checkPress = false;
         }
+    }
+    public void StartGame()
+    {
+        SceneManager.LoadScene("SampleScene");
     }
 }
