@@ -24,22 +24,26 @@ public class BallMove : MonoBehaviour
         {
             GetComponent<Transform>().position = Player.playerxPos;
         }
-        //if(Input.GetKeyDown(KeyCode.Mouse0))
-        //{
-        //    GetComponent<Rigidbody2D>().gravityScale = 2;
-        //    inthemask = "n";
-        //    Player.spawnedYet = "n";
-        //}
         if (!EventSystem.current.IsPointerOverGameObject())
         {
-            if (Input.GetMouseButtonUp(0))
+            if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 GetComponent<Rigidbody2D>().gravityScale = 2;
                 inthemask = "n";
-                //Player.spawnedYet = "n";
+                Player.spawnedYet = "n";
                 StartCoroutine(chkGameOver());
             }
         }
+        //if (!EventSystem.current.IsPointerOverGameObject())
+        //{
+        //    if (Input.GetMouseButtonUp(0))
+        //    {
+        //        GetComponent<Rigidbody2D>().gravityScale = 2;
+        //        inthemask = "n";
+        //        //Player.spawnedYet = "n";
+        //        StartCoroutine(chkGameOver());
+        //    }
+        //}
 
     }
     

@@ -50,32 +50,32 @@ public class Player : MonoBehaviour
     {
         SpawnBall();
         replaceFruit();
-        //if(Input.GetKey(KeyCode.D))
-        //{
-        //    if(transform.position.x < 4.9)
-        //    {
-        //        obj.transform.Translate(transform.right * speed * Time.deltaTime);
-        //    }
-        //}
-        //if(Input.GetKey(KeyCode.A))
-        //{
-        //    if (transform.position.x > -4.7)
-        //    {
-        //        obj.transform.Translate(transform.right * speed * Time.deltaTime * (-1));
-        //    }
-        //}
-        if (!EventSystem.current.IsPointerOverGameObject())
+        if (Input.GetKey(KeyCode.D))
         {
-            if (Input.GetMouseButton(0))
+            if (transform.position.x < 4)
             {
-                Vector3 mouse = new Vector3(Input.GetAxis("Mouse X") * speed * Time.deltaTime, 0, 0);
-                transform.Translate(mouse * 30f);
-            }
-            if (Input.GetMouseButtonUp(0) && spawnedYet == "y")
-            {
-                spawnedYet = "n";
+                obj.transform.Translate(transform.right * speed * Time.deltaTime);
             }
         }
+        if (Input.GetKey(KeyCode.A))
+        {
+            if (transform.position.x > -4)
+            {
+                obj.transform.Translate(transform.right * speed * Time.deltaTime * (-1));
+            }
+        }
+        //if (!EventSystem.current.IsPointerOverGameObject())
+        //{
+        //    if (Input.GetMouseButton(0))
+        //    {
+        //        Vector3 mouse = new Vector3(Input.GetAxis("Mouse X") * speed * Time.deltaTime, 0, 0);
+        //        transform.Translate(mouse * 30f);
+        //    }
+        //    if (Input.GetMouseButtonUp(0) && spawnedYet == "y")
+        //    {
+        //        spawnedYet = "n";
+        //    }
+        //}
         playerxPos = transform.position;
 
         if (CheckedLose == "y") ShowDeathScreen();
