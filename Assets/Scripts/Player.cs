@@ -137,7 +137,7 @@ public class Player : MonoBehaviour
             PlayerPrefs.SetInt("coins", coins + OneGameCoins);
             coins = PlayerPrefs.GetInt("coins");
             SumPoints.text = (coins).ToString();
-            scoreD.text = "Score: \n" + (OneGameCoins).ToString();
+            scoreD.text = (OneGameCoins).ToString();
             loseCheckForGameOver = "y";
         }
     }
