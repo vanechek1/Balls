@@ -50,14 +50,14 @@ public class Player : MonoBehaviour
     {
         SpawnBall();
         replaceFruit();
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             if (transform.position.x < 4)
             {
                 obj.transform.Translate(transform.right * speed * Time.deltaTime);
             }
         }
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             if (transform.position.x > -4)
             {
