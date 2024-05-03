@@ -26,7 +26,7 @@ public class BallMove : MonoBehaviour
         }
         if (!EventSystem.current.IsPointerOverGameObject())
         {
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Space))
             {
                 GetComponent<Rigidbody2D>().gravityScale = 2;
                 inthemask = "n";
