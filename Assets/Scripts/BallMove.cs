@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class BallMove : MonoBehaviour
 {
@@ -11,6 +13,8 @@ public class BallMove : MonoBehaviour
     private Player odod;
     void Start()
     {
+        string sceneName = SceneManager.GetActiveScene().name;
+        Debug.Log(sceneName);
         if(transform.position.y < 3.2)
         {
             inthemask = "n";
@@ -24,7 +28,7 @@ public class BallMove : MonoBehaviour
         {
             GetComponent<Transform>().position = Player.playerxPos;
         }
-        if (!EventSystem.current.IsPointerOverGameObject())
+        if (true)
         {
             if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Space))
             {

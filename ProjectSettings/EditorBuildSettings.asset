@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Shop.unity
     guid: 3f17871fcbe0e4f419c54b1d28c9845d
+  - enabled: 1
+    path: Assets/Scenes/CarsGame.unity
+    guid: facecd785b1ffb244b45630bed1a2a7f
   m_configObjects: {}
