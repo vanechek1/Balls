@@ -39,4 +39,9 @@ public class Restart : MonoBehaviour
         SceneManager.LoadScene("CarsGame");
     }
 
+    public void StartAnimalsGame()
+    {
+        SceneManager.LoadScene("AnimalsGame");
+    }
+
 }
