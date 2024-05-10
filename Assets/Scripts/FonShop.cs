@@ -9,8 +9,13 @@ public class FonShop : MonoBehaviour
     public int price, access;
     public GameObject block;
     public TextMeshProUGUI objectPrice;
+    public TextMeshProUGUI score;
+    public TextMeshProUGUI gameName;
     void Awake()
     {
+        //PlayerPrefs.SetInt("BallsAccess", 0);
+        //PlayerPrefs.SetInt("CarsAccess", 0);
+        //PlayerPrefs.SetInt("AnimalsAccess", 0);
         AccessUpdate();
     }
     void AccessUpdate()
@@ -35,6 +40,8 @@ public class FonShop : MonoBehaviour
             {
                 PlayerPrefs.SetInt(objectName + "Access", 1);
                 PlayerPrefs.SetInt("coins", coins - price);
+                score.text = (coins-price).ToString();
+                gameName.text = objectName;
                 AccessUpdate();
             }
         }

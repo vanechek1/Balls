@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6879009363935327951}
   - component: {fileID: 2309660319443548616}
   - component: {fileID: 5643883619701083081}
-  - component: {fileID: 3265878533730498146}
   - component: {fileID: 5530444451203005503}
   m_Layer: 0
   m_Name: icon_beachball
@@ -100,7 +99,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 5
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 2
@@ -514,20 +513,6 @@ PolygonCollider2D:
       - {x: 9.365, y: -0.84499997}
       - {x: 9.335, y: -0.85499996}
   m_UseDelaunayMesh: 0
---- !u!114 &3265878533730498146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7821579627486695239}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 068b764ab3c761d4f9e04da66a8f6577, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 2309660319443548616}
-  DeathScreen: {fileID: 1030754774095277675, guid: 3f55bdd03c9a0124598cc8e75a130e4d, type: 3}
 --- !u!114 &5530444451203005503
 MonoBehaviour:
   m_ObjectHideFlags: 0

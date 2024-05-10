@@ -13,7 +13,7 @@ public class Restart : MonoBehaviour
     {
         ad.PlayOneShot(clickBt);
         Player.CheckedLose = "n";
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void OpenShop()
     {
@@ -29,6 +29,7 @@ public class Restart : MonoBehaviour
             checkPress = false;
         }
     }
+
     public void StartGame()
     {
         SceneManager.LoadScene("SampleScene");

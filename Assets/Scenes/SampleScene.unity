@@ -167,8 +167,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -88.34445, y: -42.596268}
-  m_SizeDelta: {x: 176.6896, y: 85.1918}
+  m_AnchoredPosition: {x: -106.400116, y: -42.596085}
+  m_SizeDelta: {x: 212.7999, y: 85.192}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &44815687
 MonoBehaviour:
@@ -1529,8 +1529,8 @@ Transform:
   m_GameObject: {fileID: 396663403}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.81, y: 3.88, z: 0}
-  m_LocalScale: {x: 0.7728877, y: 0.6954053, z: 1}
+  m_LocalPosition: {x: 6.9211, y: 3.82, z: 0}
+  m_LocalScale: {x: 0.8130181, y: 0.656254, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 114964039}
@@ -2398,8 +2398,8 @@ GameObject:
   - component: {fileID: 1152807925}
   - component: {fileID: 1152807924}
   - component: {fileID: 1152807923}
-  - component: {fileID: 1152807926}
   - component: {fileID: 1152807927}
+  - component: {fileID: 1152807928}
   m_Layer: 5
   m_Name: BShop
   m_TagString: Untagged
@@ -2423,8 +2423,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -154, y: 50}
-  m_SizeDelta: {x: 62, y: 58}
+  m_AnchoredPosition: {x: -153.02109, y: 50}
+  m_SizeDelta: {x: 63.9578, y: 58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1152807923
 MonoBehaviour:
@@ -2470,9 +2470,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1152807926}
-        m_TargetAssemblyTypeName: Restart, Assembly-CSharp
-        m_MethodName: OpenShop
+      - m_Target: {fileID: 1152807928}
+        m_TargetAssemblyTypeName: ReturnHome, Assembly-CSharp
+        m_MethodName: RHome
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2502,7 +2502,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0bc5269048241704db3a836847130e1d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 94a659c05dedbb242a3ef0a7b7245772, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2520,20 +2520,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1152807921}
   m_CullTransparentMesh: 1
---- !u!114 &1152807926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1152807921}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 265a55725c66e9e40a27c2f540abcd6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ad: {fileID: 1152807927}
-  clickBt: {fileID: 8300000, guid: affa16a0f8634754c8edb5f6205bfec8, type: 3}
 --- !u!82 &1152807927
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2630,6 +2616,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1152807928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1152807921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b281c594e6d44974fbee7ef35b93e7c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: {fileID: 44815687}
+  ad: {fileID: 1152807927}
+  clickBt: {fileID: 8300000, guid: affa16a0f8634754c8edb5f6205bfec8, type: 3}
 --- !u!1 &1226112871 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477857690555772570, guid: 3f55bdd03c9a0124598cc8e75a130e4d, type: 3}

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1847632370924355312}
   - component: {fileID: 2902249460058932102}
   - component: {fileID: 7899991165538343329}
-  - component: {fileID: 8079301739007238742}
   - component: {fileID: 6063170742826877086}
   m_Layer: 0
   m_Name: icon_handball
@@ -221,19 +220,6 @@ PolygonCollider2D:
       - {x: 0.35999998, y: -1.91}
       - {x: 0.57, y: -1.8499999}
   m_UseDelaunayMesh: 0
---- !u!114 &8079301739007238742
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7869092188424001032}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 068b764ab3c761d4f9e04da66a8f6577, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 2902249460058932102}
 --- !u!114 &6063170742826877086
 MonoBehaviour:
   m_ObjectHideFlags: 0

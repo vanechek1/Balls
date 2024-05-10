@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3447062300842891808}
   - component: {fileID: 6763635753094950224}
   - component: {fileID: 5329687185999456709}
-  - component: {fileID: 5372643450815705964}
   m_Layer: 0
   m_Name: icon_fitnes
   m_TagString: 10
@@ -99,7 +98,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 5
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 2
@@ -480,17 +479,3 @@ PolygonCollider2D:
       - {x: 0.9130518, y: -11.823442}
       - {x: 0.92460936, y: -11.811885}
   m_UseDelaunayMesh: 0
---- !u!114 &5372643450815705964
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1697696051646905343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 068b764ab3c761d4f9e04da66a8f6577, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 6763635753094950224}
-  DeathScreen: {fileID: 1030754774095277675, guid: 3f55bdd03c9a0124598cc8e75a130e4d, type: 3}
