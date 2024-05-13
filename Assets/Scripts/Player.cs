@@ -19,7 +19,8 @@ public class Player : MonoBehaviour
     public int[] points;
     public TextMeshProUGUI SumPoints;
     public GameObject obj;
-    static public string spawnedYet = "n";
+    static public string gripIsFull = "n";
+    static public string wasSpawned = "n";
     static public Vector2 playerxPos;
     static public Vector2 spawnPos;
     static public string newBall = "n";
@@ -43,7 +44,7 @@ public class Player : MonoBehaviour
 
         loseCheckForGameOver = "n";
         DeathScreen.SetActive(false);
-        spawnedYet = "n";
+        gripIsFull = "n";
         ShowNextBall();
     }
     void Update()
@@ -82,11 +83,16 @@ public class Player : MonoBehaviour
     }
     void SpawnBall()
     {
-        if(spawnedYet == "n")
+        
+        if (gripIsFull == "n" && wasSpawned == "n")
         {
+            gripIsFull = "y";
             StartCoroutine(SpawnTimer());
-            spawnedYet = "w";
+            Debug.Log("Скрипт спавна отработал " +
+                "gripIsFull = " + gripIsFull
+                + " wasSpawned = " + wasSpawned);
         }
+        
     }
     void replaceFruit()
     {
@@ -116,7 +122,7 @@ public class Player : MonoBehaviour
         nextBall.GetComponent<BallMove>().enabled = true;
         Destroy(timeBall);
         Instantiate(nextBall, obj.transform.position, Quaternion.Euler(0f, 0f, 0f));
-        spawnedYet = "y";
+       // gripIsFull = "y";
         ShowNextBall();
     }
     void ShowNextBall()

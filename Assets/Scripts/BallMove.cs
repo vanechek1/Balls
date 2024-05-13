@@ -14,7 +14,7 @@ public class BallMove : MonoBehaviour
     void Start()
     {
         string sceneName = SceneManager.GetActiveScene().name;
-        Debug.Log(sceneName);
+ //       Debug.Log(sceneName);
         if(transform.position.y < 3.2)
         {
             inthemask = "n";
@@ -30,12 +30,12 @@ public class BallMove : MonoBehaviour
         }
         if (true)
         {
-            if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Space))
+
+            if ((Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Space)) && (Player.wasSpawned == "n"))
             {
-                GetComponent<Rigidbody2D>().gravityScale = 2;
-                inthemask = "n";
-                Player.spawnedYet = "n";
-                StartCoroutine(chkGameOver());
+
+                StartCoroutine(delayBeforeSpawn());
+
             }
         }
         //if (!EventSystem.current.IsPointerOverGameObject())
@@ -79,5 +79,15 @@ public class BallMove : MonoBehaviour
     {
         yield return new WaitForSeconds(.75f);
         timetocheck = "y";
+    }
+    IEnumerator delayBeforeSpawn()
+    {
+        Player.wasSpawned = "y";
+        Player.gripIsFull = "n";
+        GetComponent<Rigidbody2D>().gravityScale = 2;
+        inthemask = "n";
+        StartCoroutine(chkGameOver());
+        yield return new WaitForSeconds(.7f);
+        Player.wasSpawned = "n";
     }
 }
