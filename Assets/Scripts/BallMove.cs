@@ -31,7 +31,7 @@ public class BallMove : MonoBehaviour
         if (true)
         {
 
-            if ((Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Space)) && (Player.wasSpawned == "n"))
+            if ((Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Space)) && (Player.singleSpaceClick == "n"))
             {
 
                 StartCoroutine(delayBeforeSpawn());
@@ -82,12 +82,22 @@ public class BallMove : MonoBehaviour
     }
     IEnumerator delayBeforeSpawn()
     {
-        Player.wasSpawned = "y";
+        Debug.Log("Скрипт пробела отработал " +
+                "gripIsFull = " + Player.gripIsFull
+                + " singleSpaceClick = " + Player.singleSpaceClick);
+        Player.singleSpaceClick = "y";
         Player.gripIsFull = "n";
-        GetComponent<Rigidbody2D>().gravityScale = 2;
+        Debug.Log("Параметры пробела изменены " +
+                "gripIsFull = " + Player.gripIsFull
+                + " singleSpaceClick = " + Player.singleSpaceClick);
+
+        GetComponent<Rigidbody2D>().gravityScale = 3;
         inthemask = "n";
         StartCoroutine(chkGameOver());
         yield return new WaitForSeconds(.7f);
-        Player.wasSpawned = "n";
+        Player.singleSpaceClick = "n";
+        Debug.Log("Можно нажимать снова " +
+                "gripIsFull = " + Player.gripIsFull
+                + " singleSpaceClick = " + Player.singleSpaceClick);
     }
 }

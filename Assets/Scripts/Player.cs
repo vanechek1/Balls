@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     public TextMeshProUGUI SumPoints;
     public GameObject obj;
     static public string gripIsFull = "n";
-    static public string wasSpawned = "n";
+    static public string singleSpaceClick = "n";
     static public Vector2 playerxPos;
     static public Vector2 spawnPos;
     static public string newBall = "n";
@@ -84,13 +84,13 @@ public class Player : MonoBehaviour
     void SpawnBall()
     {
         
-        if (gripIsFull == "n" && wasSpawned == "n")
+        if (gripIsFull == "n" && singleSpaceClick == "n")
         {
             gripIsFull = "y";
             StartCoroutine(SpawnTimer());
             Debug.Log("Скрипт спавна отработал " +
                 "gripIsFull = " + gripIsFull
-                + " wasSpawned = " + wasSpawned);
+                + " singleSpaceClick = " + singleSpaceClick);
         }
         
     }
