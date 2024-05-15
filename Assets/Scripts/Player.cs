@@ -111,7 +111,7 @@ public class Player : MonoBehaviour
 
     IEnumerator SpawnTimer()
     {
-        yield return new WaitForSeconds(.75f);
+        yield return new WaitForSeconds(1.0f);
         //nextBall.transform.Translate(obj.transform.position);
         nextBall.GetComponent<BallMove>().enabled = true;
         Destroy(timeBall);

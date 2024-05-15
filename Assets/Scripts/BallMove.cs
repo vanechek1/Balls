@@ -11,6 +11,7 @@ public class BallMove : MonoBehaviour
     private string inthemask = "y";
     private string timetocheck = "n";
     private Player odod;
+    private string wasClicked = "n";
     void Start()
     {
         string sceneName = SceneManager.GetActiveScene().name;
@@ -30,12 +31,14 @@ public class BallMove : MonoBehaviour
         }
         if (true)
         {
-            if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Space))
+            if ((Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Space))&&((wasClicked == "n")))
             {
+                wasClicked = "y";
                 GetComponent<Rigidbody2D>().gravityScale = 2;
                 inthemask = "n";
                 Player.spawnedYet = "n";
                 StartCoroutine(chkGameOver());
+                Invoke("delay", 1.3f);
             }
         }
         //if (!EventSystem.current.IsPointerOverGameObject())
@@ -48,7 +51,7 @@ public class BallMove : MonoBehaviour
         //        StartCoroutine(chkGameOver());
         //    }
         //}
-
+       // Debug.Log("wasClicked = " + wasClicked);
     }
     
     // Сделать отдельным скриптом, чтобы была возможность отключать именно слияние (когда емкость полная, чтобы движущийся в облаке шар не сливался до падения)
@@ -79,5 +82,10 @@ public class BallMove : MonoBehaviour
     {
         yield return new WaitForSeconds(.75f);
         timetocheck = "y";
+    }
+
+    void delay()
+    {
+        wasClicked = "n";
     }
 }
