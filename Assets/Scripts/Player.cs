@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.InteropServices;
 using TMPro;
 using TMPro.Examples;
@@ -85,33 +86,47 @@ public class Player : MonoBehaviour
         if(spawnedYet == "n")
         {
             StartCoroutine(SpawnTimer());
-            spawnedYet = "w";
+            spawnedYet = "y";
         }
     }
     void replaceFruit()
     {
-        if(newBall == "y")
+        if (newBall == "y")
         {
             newBall = "n";
             //SumPoints.text = (int.Parse(SumPoints.text) + points[whichBall]).ToString();
             Instantiate(effect, spawnPos, Quaternion.Euler(0f, 0f, 0f));
-            GameObject nb = Instantiate(balls[whichBall+1], spawnPos, Quaternion.Euler(0f, 0f, 0f));
-            nb.GetComponent<Rigidbody2D>().gravityScale = 2;
 
-            //int coins = PlayerPrefs.GetInt("coins");
-            //PlayerPrefs.SetInt("coins", coins + points[whichBall]);
-            //coins = PlayerPrefs.GetInt("coins");
-            //SumPoints.text = coins.ToString();
-            int OneGameCoins = PlayerPrefs.GetInt("GameCoins");
-            PlayerPrefs.SetInt("GameCoins", OneGameCoins + points[whichBall]);
-            OneGameCoins = PlayerPrefs.GetInt("GameCoins");
-            SumPoints.text = OneGameCoins.ToString();
+            // Проверка на наличие трех одинаковых мячей
+            List<GameObject> ballsInScene = new List<GameObject>();
+            foreach (GameObject ball in GameObject.FindGameObjectsWithTag("Ball"))
+            {
+                ballsInScene.Add(ball);
+            }
+
+            // Подсчет количества одинаковых мячей
+            int count = ballsInScene.Count(ball => ball.name == balls[whichBall].name);
+
+            if (count < 3)
+            {
+                GameObject nb = Instantiate(balls[whichBall + 1], spawnPos, Quaternion.Euler(0f, 0f, 0f));
+                nb.GetComponent<Rigidbody2D>().gravityScale = 2;
+
+                //int coins = PlayerPrefs.GetInt("coins");
+                //PlayerPrefs.SetInt("coins", coins + points[whichBall]);
+                //coins = PlayerPrefs.GetInt("coins");
+                //SumPoints.text = coins.ToString();
+                int OneGameCoins = PlayerPrefs.GetInt("GameCoins");
+                PlayerPrefs.SetInt("GameCoins", OneGameCoins + points[whichBall]);
+                OneGameCoins = PlayerPrefs.GetInt("GameCoins");
+                SumPoints.text = OneGameCoins.ToString();
+            }
         }
     }
 
     IEnumerator SpawnTimer()
     {
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(2.15f);
         //nextBall.transform.Translate(obj.transform.position);
         nextBall.GetComponent<BallMove>().enabled = true;
         Destroy(timeBall);
@@ -121,7 +136,7 @@ public class Player : MonoBehaviour
     }
     void ShowNextBall()
     {
-        nextBall = balls[Random.Range(0, 5)];
+        nextBall = balls[Random.Range(1, 1)];
         nextBall.GetComponent<BallMove>().enabled = false;
         timeBall = Instantiate(nextBall, nextPos.transform.position, Quaternion.Euler(0f, 0f, 0f));
 
