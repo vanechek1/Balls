@@ -17,6 +17,8 @@ public class FonShop : MonoBehaviour
         //PlayerPrefs.SetInt("CarsAccess", 0);
         //PlayerPrefs.SetInt("AnimalsAccess", 0);
         AccessUpdate();
+        if (access == 1)
+            gameName.text = objectName;
     }
     void AccessUpdate()
     {
