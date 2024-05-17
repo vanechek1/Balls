@@ -84,8 +84,10 @@ public class Player : MonoBehaviour
     {
         if(spawnedYet == "n")
         {
-            StartCoroutine(SpawnTimer());
+            //StartCoroutine(SpawnTimer());
             spawnedYet = "y";
+            Invoke("spawn", 1.2f);
+            
         }
     }
     void replaceFruit()
@@ -142,5 +144,12 @@ public class Player : MonoBehaviour
         }
     }
 
-
+    void spawn()
+    {
+        spawnedYet = "y";
+        nextBall.GetComponent<BallMove>().enabled = true;
+        Destroy(timeBall);
+        Instantiate(nextBall, obj.transform.position, Quaternion.Euler(0f, 0f, 0f));
+        ShowNextBall();
+    }
 }
