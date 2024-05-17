@@ -14,8 +14,6 @@ public class BallMove : MonoBehaviour
     private string wasClicked = "n";
     void Start()
     {
-        string sceneName = SceneManager.GetActiveScene().name;
-        Debug.Log(sceneName);
         if(transform.position.y < 3.2)
         {
             inthemask = "n";
