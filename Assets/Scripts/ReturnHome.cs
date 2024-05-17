@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class ReturnHome : MonoBehaviour
 {
-    public TextMeshProUGUI score;
     public AudioSource ad;
     public AudioClip clickBt;
     public void RHome()

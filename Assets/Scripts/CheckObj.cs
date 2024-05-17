@@ -23,4 +23,5 @@ public class CheckObj : MonoBehaviour
         PlayerPrefs.SetInt("coins", coins + OneGameCoins);
         SceneManager.LoadScene("StartGame");
     }
+
 }

@@ -8,7 +8,6 @@ public class Restart : MonoBehaviour
 {
     public AudioSource ad;
     public AudioClip clickBt;
-    static public bool checkPress = false;
     public void RestartLevel()
     {
         ad.PlayOneShot(clickBt);
@@ -18,30 +17,24 @@ public class Restart : MonoBehaviour
     public void OpenShop()
     {
         ad.PlayOneShot(clickBt);
-        if (checkPress == false)
-        {
-            SceneManager.LoadScene("Shop");
-            checkPress = true;
-        }
-        else
-        {
-            SceneManager.LoadScene("SampleScene");
-            checkPress = false;
-        }
+        SceneManager.LoadScene("Shop");
     }
 
     public void StartGame()
     {
+        ad.PlayOneShot(clickBt);
         SceneManager.LoadScene("SampleScene");
     }
 
     public void StartCarsGame()
     { 
+        ad.PlayOneShot(clickBt);
         SceneManager.LoadScene("CarsGame");
     }
 
     public void StartAnimalsGame()
     {
+        ad.PlayOneShot(clickBt);
         SceneManager.LoadScene("AnimalsGame");
     }
 
