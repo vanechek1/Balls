@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
 
         //SumPoints.text = coins.ToString();
         PlayerPrefs.SetInt("GameCoins", 0);
-
+        AudioListener.volume = 0.1f;
         loseCheckForGameOver = "n";
         DeathScreen.SetActive(false);
         spawnedYet = "n";
