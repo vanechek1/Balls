@@ -11,23 +11,23 @@ public class ButtonSound : MonoBehaviour
     public Sprite offMusic;
     public AudioSource ad;
     public AudioClip clickBt;
-    static public bool wasClicked = false;
+    static public bool soundClick = false;
     public AudioSource fonMusic;
 
     public void ButtonSoundClick()
     {
         ad.PlayOneShot(clickBt);
-        if (wasClicked == false)
+        if (soundClick == false)
         {
             MusicButton.GetComponent<Image>().sprite = offMusic;
             fonMusic.enabled = false;
-            wasClicked = true;
+            soundClick = true;
         }
         else
         {
             MusicButton.GetComponent<Image>().sprite = onMusic;
             fonMusic.enabled = true;
-            wasClicked = false;
+            soundClick = false;
         }
     }
 }

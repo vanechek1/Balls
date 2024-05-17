@@ -29,7 +29,7 @@ public class BallMove : MonoBehaviour
         }
         if (true)
         {
-            if ((Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Space))&&((wasClicked == "n")))
+            if (Input.GetKeyDown(KeyCode.Space) && wasClicked == "n")
             {
                 wasClicked = "y";
                 GetComponent<Rigidbody2D>().gravityScale = 2;
