@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 1254160286018369715}
   - component: {fileID: 2525112952435641026}
   - component: {fileID: 3422929410084804106}
-  - component: {fileID: 4657105100333822630}
   - component: {fileID: 8416425335250235901}
+  - component: {fileID: 1813508918665868328}
   m_Layer: 0
   m_Name: icon_football
   m_TagString: 6
@@ -114,8 +114,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &4657105100333822630
-PolygonCollider2D:
+--- !u!114 &8416425335250235901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3856947669561388902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c88fc6df63c09104289bb06b94570151, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &1813508918665868328
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -147,105 +159,5 @@ PolygonCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.35, y: 5.35}
-    newSize: {x: 5.35, y: 5.35}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.78499997, y: -2.565}
-      - {x: 0.84499997, y: -2.5249999}
-      - {x: 0.955, y: -2.5049999}
-      - {x: 1.0849999, y: -2.465}
-      - {x: 1.4549999, y: -2.2849998}
-      - {x: 1.615, y: -2.165}
-      - {x: 1.6949999, y: -2.095}
-      - {x: 1.755, y: -2.0449998}
-      - {x: 1.8449999, y: -1.9649999}
-      - {x: 1.9649999, y: -1.8449999}
-      - {x: 2.105, y: -1.6949999}
-      - {x: 2.195, y: -1.5749999}
-      - {x: 2.315, y: -1.395}
-      - {x: 2.475, y: -1.0749999}
-      - {x: 2.575, y: -0.84499997}
-      - {x: 2.635, y: -0.585}
-      - {x: 2.655, y: -0.48499998}
-      - {x: 2.675, y: -0.355}
-      - {x: 2.675, y: 0.36499998}
-      - {x: 2.645, y: 0.59499997}
-      - {x: 2.595, y: 0.78499997}
-      - {x: 2.475, y: 1.0749999}
-      - {x: 2.315, y: 1.395}
-      - {x: 2.2749999, y: 1.4549999}
-      - {x: 2.135, y: 1.655}
-      - {x: 2.0449998, y: 1.755}
-      - {x: 1.8549999, y: 1.9549999}
-      - {x: 1.755, y: 2.055}
-      - {x: 1.5749999, y: 2.195}
-      - {x: 1.395, y: 2.315}
-      - {x: 1.3249999, y: 2.355}
-      - {x: 0.905, y: 2.5549998}
-      - {x: 0.625, y: 2.635}
-      - {x: 0.515, y: 2.645}
-      - {x: 0.375, y: 2.675}
-      - {x: -0.36499998, y: 2.675}
-      - {x: -0.59499997, y: 2.645}
-      - {x: -0.78499997, y: 2.595}
-      - {x: -0.955, y: 2.5249999}
-      - {x: -1.0749999, y: 2.475}
-      - {x: -1.185, y: 2.425}
-      - {x: -1.395, y: 2.315}
-      - {x: -1.605, y: 2.175}
-      - {x: -1.745, y: 2.055}
-      - {x: -1.9549999, y: 1.8549999}
-      - {x: -2.0449998, y: 1.755}
-      - {x: -2.225, y: 1.545}
-      - {x: -2.345, y: 1.345}
-      - {x: -2.475, y: 1.0749999}
-      - {x: -2.5449998, y: 0.895}
-      - {x: -2.575, y: 0.805}
-      - {x: -2.635, y: 0.575}
-      - {x: -2.655, y: 0.475}
-      - {x: -2.675, y: 0.355}
-      - {x: -2.675, y: -0.355}
-      - {x: -2.655, y: -0.48499998}
-      - {x: -2.635, y: -0.585}
-      - {x: -2.595, y: -0.755}
-      - {x: -2.5249999, y: -0.965}
-      - {x: -2.495, y: -1.0649999}
-      - {x: -2.345, y: -1.345}
-      - {x: -2.2649999, y: -1.475}
-      - {x: -2.225, y: -1.535}
-      - {x: -2.145, y: -1.645}
-      - {x: -2.055, y: -1.745}
-      - {x: -1.8449999, y: -1.9649999}
-      - {x: -1.745, y: -2.055}
-      - {x: -1.605, y: -2.175}
-      - {x: -1.485, y: -2.2549999}
-      - {x: -1.305, y: -2.365}
-      - {x: -1.0649999, y: -2.475}
-      - {x: -0.865, y: -2.5549998}
-      - {x: -0.66499996, y: -2.615}
-      - {x: -0.53499997, y: -2.645}
-      - {x: -0.375, y: -2.675}
-      - {x: 0.345, y: -2.675}
-      - {x: 0.525, y: -2.645}
-      - {x: 0.705, y: -2.605}
-  m_UseDelaunayMesh: 0
---- !u!114 &8416425335250235901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3856947669561388902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c88fc6df63c09104289bb06b94570151, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  serializedVersion: 2
+  m_Radius: 2.675

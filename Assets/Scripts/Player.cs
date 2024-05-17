@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
 
         //SumPoints.text = coins.ToString();
         PlayerPrefs.SetInt("GameCoins", 0);
-
+        AudioListener.volume = 0.1f;
         loseCheckForGameOver = "n";
         DeathScreen.SetActive(false);
         spawnedYet = "n";
@@ -85,7 +85,7 @@ public class Player : MonoBehaviour
         if(spawnedYet == "n")
         {
             StartCoroutine(SpawnTimer());
-            spawnedYet = "w";
+            spawnedYet = "y";
         }
     }
     void replaceFruit()
@@ -111,7 +111,7 @@ public class Player : MonoBehaviour
 
     IEnumerator SpawnTimer()
     {
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(2.15f);
         //nextBall.transform.Translate(obj.transform.position);
         nextBall.GetComponent<BallMove>().enabled = true;
         Destroy(timeBall);
