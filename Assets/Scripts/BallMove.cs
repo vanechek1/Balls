@@ -34,9 +34,10 @@ public class BallMove : MonoBehaviour
                 wasClicked = "y";
                 GetComponent<Rigidbody2D>().gravityScale = 2;
                 inthemask = "n";
-                Player.spawnedYet = "n";
                 StartCoroutine(chkGameOver());
-                Invoke("delay", 1.3f);
+                Invoke("delay", 1f);
+                
+               // Player.readyForSpawn = "n";
             }
         }
         //if (!EventSystem.current.IsPointerOverGameObject())
@@ -49,7 +50,7 @@ public class BallMove : MonoBehaviour
         //        StartCoroutine(chkGameOver());
         //    }
         //}
-       // Debug.Log("wasClicked = " + wasClicked);
+     //   Debug.Log("wasClicked = " + wasClicked);
     }
     
     // Сделать отдельным скриптом, чтобы была возможность отключать именно слияние (когда емкость полная, чтобы движущийся в облаке шар не сливался до падения)

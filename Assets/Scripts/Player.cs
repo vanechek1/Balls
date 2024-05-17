@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
     public int[] points;
     public TextMeshProUGUI SumPoints;
     public GameObject obj;
-    static public string spawnedYet = "n";
+    static public string readyForSpawn = "y";
     static public Vector2 playerxPos;
     static public Vector2 spawnPos;
     static public string newBall = "n";
@@ -32,6 +32,8 @@ public class Player : MonoBehaviour
     public TextMeshProUGUI scoreD;
     static public string CheckedLose = "n";
     static public string loseCheckForGameOver = "n";
+    private string wasClicked = "n";
+    private string firstSpawn = "y";
     private void Start()
     {
         //int StartCoins = PlayerPrefs.GetInt("GameCoins");
@@ -43,7 +45,7 @@ public class Player : MonoBehaviour
         AudioListener.volume = 0.1f;
         loseCheckForGameOver = "n";
         DeathScreen.SetActive(false);
-        spawnedYet = "n";
+        readyForSpawn = "y";
         ShowNextBall();
     }
     void Update()
@@ -79,15 +81,31 @@ public class Player : MonoBehaviour
         playerxPos = transform.position;
 
         if (CheckedLose == "y") ShowDeathScreen();
+
+        if (Input.GetKeyDown(KeyCode.Space) && (firstSpawn == "n"))
+        {
+            wasClicked = "y";
+          
+        }
     }
     void SpawnBall()
     {
-        if(spawnedYet == "n")
+        if((readyForSpawn == "y") && (wasClicked == "y" || firstSpawn == "y"))
         {
             //StartCoroutine(SpawnTimer());
-            spawnedYet = "y";
-            Invoke("spawn", 1.2f);
-            
+
+            readyForSpawn = "n";
+            firstSpawn = "n";
+            wasClicked = "n";
+            nextBall.GetComponent<BallMove>().enabled = true;
+            Destroy(timeBall);
+            Instantiate(nextBall, obj.transform.position, Quaternion.Euler(0f, 0f, 0f));
+            ShowNextBall();
+
+
+            Invoke("delay", 5f);
+           
+
         }
     }
     void replaceFruit()
@@ -118,7 +136,7 @@ public class Player : MonoBehaviour
         nextBall.GetComponent<BallMove>().enabled = true;
         Destroy(timeBall);
         Instantiate(nextBall, obj.transform.position, Quaternion.Euler(0f, 0f, 0f));
-        spawnedYet = "y";
+        readyForSpawn = "y";
         ShowNextBall();
     }
     void ShowNextBall()
@@ -144,12 +162,19 @@ public class Player : MonoBehaviour
         }
     }
 
-    void spawn()
+    void delay()
     {
-        spawnedYet = "y";
-        nextBall.GetComponent<BallMove>().enabled = true;
-        Destroy(timeBall);
-        Instantiate(nextBall, obj.transform.position, Quaternion.Euler(0f, 0f, 0f));
-        ShowNextBall();
+        readyForSpawn = "y";
     }
+
+
+    //IEnumerator delayWhileSpace()
+    //{
+    //    while (true)
+    //    {
+    //        if (Input.GetKeyDown(KeyCode.Space))
+    //            yield return break;
+    //    }
+
+    //}
 }
