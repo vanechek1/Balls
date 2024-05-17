@@ -13,9 +13,9 @@ public class FonShop : MonoBehaviour
     public TextMeshProUGUI gameName;
     void Awake()
     {
-        PlayerPrefs.SetInt("BallsAccess", 0);
-        PlayerPrefs.SetInt("CarsAccess", 0);
-        PlayerPrefs.SetInt("AnimalsAccess", 0);
+        //PlayerPrefs.SetInt("BallsAccess", 0);
+        //PlayerPrefs.SetInt("CarsAccess", 0);
+        //PlayerPrefs.SetInt("AnimalsAccess", 0);
         AccessUpdate();
     }
     void AccessUpdate()
