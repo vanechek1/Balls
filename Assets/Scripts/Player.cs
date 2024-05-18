@@ -82,9 +82,10 @@ public class Player : MonoBehaviour
 
         if (CheckedLose == "y") ShowDeathScreen();
 
-        if (Input.GetKeyDown(KeyCode.Space) && (firstSpawn == "n"))
+        if ((Input.GetKeyDown(KeyCode.Space)) && (firstSpawn == "n"))
         {
-            wasClicked = "y";
+            // wasClicked = "y";
+            Invoke("delay2",1f);
           
         }
     }
@@ -92,8 +93,8 @@ public class Player : MonoBehaviour
     {
         if((readyForSpawn == "y") && (wasClicked == "y" || firstSpawn == "y"))
         {
-            //StartCoroutine(SpawnTimer());
-
+           
+           CancelInvoke("delay2");
             readyForSpawn = "n";
             firstSpawn = "n";
             wasClicked = "n";
@@ -101,14 +102,14 @@ public class Player : MonoBehaviour
             Destroy(timeBall);
             Instantiate(nextBall, obj.transform.position, Quaternion.Euler(0f, 0f, 0f));
             ShowNextBall();
+            Invoke("delay", 1f);
 
-
-            Invoke("delay", 5f);
-           
 
         }
     }
-    void replaceFruit()
+
+
+        void replaceFruit()
     {
         if(newBall == "y")
         {
@@ -167,14 +168,8 @@ public class Player : MonoBehaviour
         readyForSpawn = "y";
     }
 
-
-    //IEnumerator delayWhileSpace()
-    //{
-    //    while (true)
-    //    {
-    //        if (Input.GetKeyDown(KeyCode.Space))
-    //            yield return break;
-    //    }
-
-    //}
+    void delay2()
+    {
+        wasClicked = "y";
+    }
 }
